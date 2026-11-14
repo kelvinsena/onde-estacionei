@@ -16,7 +16,9 @@
         "ACCESS_FINE_LOCATION",
         "ACCESS_COARSE_LOCATION",
         "POST_NOTIFICATIONS",
-        "SCHEDULE_EXACT_ALARM"
+        "SCHEDULE_EXACT_ALARM",
+        "android.permission.ACCESS_COARSE_LOCATION",
+        "android.permission.ACCESS_FINE_LOCATION"
       ]
     },
     "ios": {
@@ -56,6 +58,11 @@
           ]
         }
       ]
-    ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "55828e44-4dd0-40ff-882d-81c2447970ab"
+      }
+    }
   }
 }
