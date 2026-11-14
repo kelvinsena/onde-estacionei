@@ -1,24 +1,61 @@
 {
   "expo": {
-    "name": "onde-estacionei",
+    "name": "Onde Estacionei?",
     "slug": "onde-estacionei",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
-    "ios": {
-      "supportsTablet": true
-    },
     "android": {
-      "adaptiveIcon": {
-        "backgroundColor": "#E6F4FE",
-        "foregroundImage": "./assets/android-icon-foreground.png",
-        "backgroundImage": "./assets/android-icon-background.png",
-        "monochromeImage": "./assets/android-icon-monochrome.png"
+      "package": "com.pamii.ondeestacionei",
+      "config": {
+        "googleMaps": {
+          "apiKey": "AIzaSyCpiVBo5ebw3G1iXmh0Sm_tw1PpvFmjrIo"
+        }
+      },
+      "permissions": [
+        "ACCESS_FINE_LOCATION",
+        "ACCESS_COARSE_LOCATION",
+        "POST_NOTIFICATIONS",
+        "SCHEDULE_EXACT_ALARM"
+      ]
+    },
+    "ios": {
+      "bundleIdentifier": "com.pamii.ondeestacionei",
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "Usamos sua localização para guardar a vaga e guiar você de volta ao veículo."
       }
     },
-    "web": {
-      "favicon": "./assets/favicon.png"
-    }
+    "plugins": [
+      [
+        "expo-location",
+        {
+          "locationWhenInUsePermission": "Usamos sua localização para guardar a vaga e guiar você de volta ao veículo."
+        }
+      ],
+      [
+        "expo-notifications",
+        {
+          "color": "#2563EB"
+        }
+      ],
+      [
+        "react-native-android-widget",
+        {
+          "widgets": [
+            {
+              "name": "Parking",
+              "label": "Onde Estacionei?",
+              "description": "Tempo restante do parquímetro e distância até o veículo",
+              "minWidth": "180dp",
+              "minHeight": "110dp",
+              "targetCellWidth": 3,
+              "targetCellHeight": 2,
+              "resizeMode": "horizontal|vertical",
+              "updatePeriodMillis": 1800000
+            }
+          ]
+        }
+      ]
+    ]
   }
 }
